@@ -1,0 +1,151 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Variables CSS */
+:root{
+    --white: 255,255,255;
+    --pink: 209, 99, 142;
+}
+
+/* Main CSS */
+
+body{
+    min-height: 100vh;
+    font-family: 'Viga', 'Arial', cursive;
+    background: rgba(var(--white),1);
+    color: rgb(0, 0, 0);
+}
+.container{
+    max-width: 1150px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.fluid{
+    display: flex;
+    max-width: 800px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#canvas{
+    background: rgba(var(--white),1);
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 58px;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+}
+.scores{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.edits{
+    min-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.btns, #bestScore{
+    margin-top: 15px;
+}
+.lose, .start2{
+    z-index: 999;
+    position: absolute;
+    margin-top: 15px;
+    font-size: 35px;
+    display: none;
+}
+.start2{
+    display: block;
+    min-width: 150px;
+    margin-top: 200px;
+}
+#canvas-block{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.reset{
+    margin-left: 15px;
+}
+button {
+  box-sizing: content-box;
+  background-color: #8f7a66;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 30px;
+}
+button:hover {
+  cursor: pointer;
+}
+#restart {
+  display: inline-block;
+}
